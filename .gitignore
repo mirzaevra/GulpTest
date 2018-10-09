@@ -1,0 +1,11 @@
+#npm vendor modules
+/node_modules
+node_modules/
+
+# phpstorm project files
+.idea
+
+/.idea
+# windows thumbnail cache
+Thumbs.db
+

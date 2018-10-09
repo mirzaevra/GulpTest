@@ -1,0 +1,24 @@
+@media screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1770px) {
+  .container {
+    width: 1710px;
+    margin: 0 auto; } }
