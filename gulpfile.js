@@ -11,7 +11,7 @@ var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 // Пути к файлам
 var sourceDir = 'source';
-var publicDir = 'publicDir';
+var publicDir = 'public';
 var path = {
     scss: sourceDir + '/scss/**/*.scss',
     css: sourceDir + '/css',
