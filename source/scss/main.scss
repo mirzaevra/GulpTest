@@ -1,6 +1,8 @@
+@import "src/reset";
+@import "src/icon-fonts";
+@import "src/variables";
+@import "src/buttons";
+
 body {
-  padding: 20px;
-  background: red;
-  color: black;
-  transform: translateY(50%);
+
 }
