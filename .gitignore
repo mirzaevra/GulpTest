@@ -1,6 +1,7 @@
 #npm vendor modules
 /node_modules
 node_modules/
+source/css/*
 
 # phpstorm project files
 .idea
@@ -8,4 +9,3 @@ node_modules/
 /.idea
 # windows thumbnail cache
 Thumbs.db
-
