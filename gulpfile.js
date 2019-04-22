@@ -14,13 +14,13 @@ var csso = require('gulp-csso');
 var sourceDir = 'source';
 var publicDir = 'public';
 var path = {
+    all: sourceDir + '/*',
     scss: sourceDir + '/scss/**/*.scss',
     css: sourceDir + '/css',
     html: sourceDir + '/*.html',
     js: sourceDir + '/js/**/*.js',
     fonts: sourceDir + '/fonts/**/*',
     images: sourceDir + '/images/**/*',
-    pug: sourceDir + '/pages/*.pug'
 }
 //Компиляция scss в css
 gulp.task('scss', function () {
@@ -34,7 +34,8 @@ gulp.task('scss', function () {
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: sourceDir
+            baseDir: sourceDir,
+            directory: true
         },
         notify: false
     });
@@ -66,15 +67,17 @@ gulp.task('watch', ['browser-sync', 'scss'], function () {
 
 //Билд проекта для продакшена
 gulp.task('build', ['clean', 'images', 'scss'], function () {
-    var buildHtml = gulp.src(path.html)
+    gulp.src(path.html)
         .pipe(gulp.dest(publicDir));
-    var buildCss = gulp.src(path.css + '/**/*')
+    gulp.src(path.all)
+        .pipe(gulp.dest(publicDir));
+    gulp.src(path.css + '/**/*')
         .pipe(gcmq())
         .pipe(csso())
         .pipe(gulp.dest(publicDir + '/css'));
-    var buildJs = gulp.src(path.js)
+    gulp.src(path.js)
         .pipe(gulp.dest(publicDir + '/js'));
-    var buildFonts = gulp.src(path.fonts)
+    gulp.src(path.fonts)
         .pipe(gulp.dest(publicDir + '/fonts'));
 });
 
