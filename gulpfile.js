@@ -14,7 +14,7 @@ var csso = require('gulp-csso');
 var sourceDir = 'source';
 var publicDir = 'public';
 var path = {
-    all: sourceDir + '/*',
+    all: sourceDir + '/*.*',
     scss: sourceDir + '/scss/**/*.scss',
     css: sourceDir + '/css',
     html: sourceDir + '/*.html',
